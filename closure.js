@@ -156,3 +156,26 @@ console.log(add5(10,20))
 // person.setAge(25); 
 // console.log(person.getName()); // Output: "Bob"
 // console.log(person.getAge());
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 7
+
+function createCalculator(str){
+
+    switch(str){
+        case "add":
+            return function(a,b){
+                return a+b
+        };
+        case "multiply":
+            return function(a,b){
+                return  a * b
+        }
+    }
+        
+    
+}
+
+const multiply = createCalculator("add"); 
+// console.log(multiply(2,8))
