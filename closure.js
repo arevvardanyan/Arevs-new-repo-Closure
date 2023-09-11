@@ -133,6 +133,22 @@ const createPerson = function(name,age){
     }
 }
 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 5
+
+
+function add(a = 0, b = 0, c = 0) { 
+    return a + b + c; 
+} 
+function partial(foo,num){
+    return function(a,b){
+        return foo(num,a,b) 
+    }
+}
+const add5 = partial(add,5);
+console.log(add5(10,20))
+
 // const person = createPerson("Alice", 30); 
 // console.log(person.getName()); // Output: "Alice"
 // console.log(person.getAge()); // Output: 30 
